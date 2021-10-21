@@ -1,7 +1,7 @@
 export default function Notfound() {
 	return (
 		<div id="wrapper">
-			Página não encontrada
+			<p id="p1">Página não encontrada</p>
 		</div>
 	);
 }

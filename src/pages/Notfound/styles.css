@@ -6,6 +6,10 @@
   height: 100vh;
 }
 
+#p1 {
+  font-size: 50px;
+}
+
 #search-box {
   display: flex;
   flex-direction: row;
