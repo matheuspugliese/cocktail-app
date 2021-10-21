@@ -52,36 +52,40 @@ export default function Home() {
 		<div id="wrapper">
 			<div id="logo" />
 			<div id="search-box">
-				<input type="text" id="search-input" onChange={handleInput} />
+				<input type="text" id="search-input" onChange={handleInput} placeholder="Pesquise um Drink" />
 				<VscSearch id="icon" />
-				<button onClick={toggleCategories}>Mostrar Categorias</button>
+				<button onClick={toggleCategories} id="button">Mostrar Categorias</button>
 			</div>
 			{state?.drinks && (
 				<>
-					<p>Drinks</p>
-					<ul>
-						{state.drinks.map(({ idDrink, strDrink }) => (
-							<li key={idDrink}>
-								<NavLink to={`/cocktail/${idDrink}`}>
-									{strDrink}
-								</NavLink>
-							</li>
-						))}
-					</ul>
+					<div id="box">
+						<p>Drinks</p>
+						<ul>
+							{state.drinks.map(({ idDrink, strDrink }) => (
+								<li key={idDrink}>
+									<NavLink to={`/cocktail/${idDrink}`} className="nav">
+										{strDrink}
+									</NavLink>
+								</li>
+							))}
+						</ul>
+					</div>
 				</>
 			)}
 			{state?.categories && (
 				<>
-					<p>Categorias</p>
-					<ul>
-						{state.categories.map(({ strCategory }) => (
-							<li key={strCategory}>
-								<NavLink to={`/category/${strCategory}`}>
-									{strCategory}
-								</NavLink>
-							</li>
-						))}
-					</ul>
+					<div id="box">
+						<p>Categorias</p>
+						<ul>
+							{state.categories.map(({ strCategory }) => (
+								<li key={strCategory}>
+									<NavLink to={`/category/${strCategory}`} className="nav">
+										{strCategory}
+									</NavLink>
+								</li>
+							))}
+						</ul>
+					</div>
 				</>
 			)}
 		</div>

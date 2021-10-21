@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { AxiosResponse } from 'axios';
 import { NavLink, useParams } from 'react-router-dom';
 
+import './styles.css';
+
 import http from '../../services/http';
 
 export interface CategoryDrinksProps {
@@ -31,16 +33,19 @@ export default function Category() {
 		<div>
 			{data && (
 				<>
-					<p>Drinks</p>
-					<ul>
-						{data.map(({ idDrink, strDrink }) => (
-							<li key={idDrink}>
-								<NavLink to={`/cocktail/${idDrink}`}>
-									{strDrink}
-								</NavLink>
-							</li>
-						))}
-					</ul>
+					<div id="div">
+						<p>Drinks</p>
+						<ul>
+							{data.map(({ idDrink, strDrink, strDrinkThumb }) => (
+								<li key={idDrink}>
+									<img src={strDrinkThumb} width="50px" height="50px"/>
+									<NavLink to={`/cocktail/${idDrink}`} id="link" >
+										{strDrink}
+									</NavLink>
+								</li>
+							))}
+						</ul>
+					</div>
 				</>
 			)}
 		</div>

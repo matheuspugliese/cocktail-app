@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import './styles.css';
+
 import { AxiosResponse } from 'axios';
 import { useParams } from 'react-router-dom';
 
@@ -24,11 +26,14 @@ export default function Details() {
 		<div>
 			{data ? (
 				<>
-					<h1>{data.strDrink}</h1>
-					<img src={data.strDrinkThumb} width="500px" />
+					<div id="container">
+						<div id="header"></div>
+						<h1 id="h1">{data.strDrink}</h1>
+						<img src={data.strDrinkThumb} width="500px" id="img"/>
+					</div>
 				</>
 			) : (
-				<>Carregando...</>
+				<p id="load">Carregando...</p>
 			)}
 		</div>
 	);

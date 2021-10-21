@@ -32,6 +32,7 @@
   height: 50px;
   width: 30px;
   border: none;
+  background-color: transparent;
 
 }
 
@@ -52,15 +53,12 @@
   box-shadow: 1px 1px 2px 2px rgb(214, 214, 214);
 }
 
-#toggle-button {
-  display: flex;
-  flex-direction: row;
-  grid-column-gap: 10px;
-}
-
 #button {
-  height: 30px;
-  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 120px;
   outline: none;
   color: #000;
   box-shadow: 1px 2px 2px rgb(143, 143, 143);
@@ -76,7 +74,84 @@
 
 #button:hover {
   background-color: rgb(221, 220, 220);
+  box-shadow: 2px 3px 3px rgb(143, 143, 143);
 }
+
+p {
+  font-size: 30px;
+}
+
+#box {
+  width: 300px;
+  margin-top: 50px;
+  border-bottom: 20px solid #03a9f4;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#box p {
+  color: #fff;
+  background: #03a9f4;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.nav {
+  color: #000;
+  transition: transform 0.5s;
+  outline: none;
+}
+
+.nav:hover {
+  background: #25bcff;
+}
+
+#box ul {
+  position: relative;
+  background: #fff;
+}
+
+#box ul li {
+  color: #000;
+  list-style: none;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0 5px 25px rgba(0,0,0,.1);
+  opacity: 1;
+  transition: transform 0.5s;
+}
+
+#box ul li:hover {
+  transform: scale(1.1);
+  z-index: 100;
+  background: #25bcff;
+  box-shadow: 0 5px 25px rgba(0,0,0,.2);
+}
+
+#box ul li:hover a {
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
