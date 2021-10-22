@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
-import './styles.css';
-
 import { AxiosResponse } from 'axios';
 import { useParams } from 'react-router-dom';
 
 import { DrinkProps } from '../../context';
 import http from '../../services/http';
+
+import './styles.css';
 
 export default function Details() {
 	const [data, setData] = useState<DrinkProps>();
