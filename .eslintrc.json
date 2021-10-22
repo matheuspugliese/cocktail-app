@@ -20,13 +20,13 @@
   "plugins": ["react", "@typescript-eslint", "eslint-plugin-import-helpers"],
   "rules": {
     "indent": ["error", "tab"],
-    "linebreak-style": ["error", "windows"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "no-mixed-spaces-and-tabs": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/display-name": "off",
     "import-helpers/order-imports": [
       "warn",

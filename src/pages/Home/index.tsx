@@ -6,8 +6,7 @@ import { NavLink } from 'react-router-dom';
 import { CategoryProps } from '../../context';
 import useContext from '../../context/useContext';
 import http from '../../services/http';
-
-import './styles.css';
+import styles from './styles';
 
 export interface RequestResponse {
   drinks: CategoryProps[];
@@ -49,7 +48,7 @@ export default function Home() {
 	}, [value, getData]);
 
 	return (
-		<div id="wrapper">
+		<div className={styles}>
 			<div id="logo" />
 			<div id="search-box">
 				<input type="text" id="search-input" onChange={handleInput} placeholder="Pesquise um Drink" />

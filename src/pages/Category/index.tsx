@@ -3,9 +3,8 @@ import { useEffect, useState } from 'react';
 import { AxiosResponse } from 'axios';
 import { NavLink, useParams } from 'react-router-dom';
 
-import './styles.css';
-
 import http from '../../services/http';
+import styles from './styles';
 
 export interface CategoryDrinksProps {
   strDrink: string;
@@ -30,7 +29,7 @@ export default function Category() {
 	}, [id]);
 
 	return (
-		<div>
+		<div className={styles}>
 			{data && (
 				<>
 					<div id="div">

@@ -5,8 +5,7 @@ import { useParams } from 'react-router-dom';
 
 import { DrinkProps } from '../../context';
 import http from '../../services/http';
-
-import './styles.css';
+import styles from './styles';
 
 export default function Details() {
 	const [data, setData] = useState<DrinkProps>();
@@ -23,7 +22,7 @@ export default function Details() {
 	}, [id]);
 
 	return (
-		<div>
+		<div className={styles}>
 			{data ? (
 				<>
 					<div id="container">
